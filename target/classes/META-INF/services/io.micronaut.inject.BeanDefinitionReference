@@ -1,2 +1,6 @@
-example.micronaut.$ConferenceController$Definition$Reference
-example.micronaut.$ConferenceService$Definition$Reference
+example.micronaut.$FruitClient$Intercepted$Definition$Reference
+example.micronaut.$FruitController$Definition$Intercepted$Definition$Reference
+example.micronaut.$FruitController$Definition$Reference
+example.micronaut.$MongoDbConfiguration$Intercepted$Definition$Reference
+example.micronaut.$MongoDbFruitRepository$Definition$Intercepted$Definition$Reference
+example.micronaut.$MongoDbFruitRepository$Definition$Reference
