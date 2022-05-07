@@ -1,0 +1,1 @@
+{"groups":[{"name":"db","type":"example.micronaut.MongoDbConfiguration"},{"name":"db","type":"example.micronaut.MongoDbConfiguration"}],"properties":[{"name":"db.collection","type":"java.lang.String","sourceType":"example.micronaut.MongoDbConfiguration"},{"name":"db.name","type":"java.lang.String","sourceType":"example.micronaut.MongoDbConfiguration"}]}
