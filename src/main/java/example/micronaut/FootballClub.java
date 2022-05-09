@@ -8,7 +8,7 @@ import javax.validation.constraints.NotBlank;
 
 @Introspected
 @ReflectiveAccess
-public class Fruit {
+public class FootballClub {
 
     @NonNull
     @NotBlank
@@ -16,19 +16,19 @@ public class Fruit {
     private final String name;
 
     @Nullable
-    @BsonProperty("description")
-    private final String description;
+    @BsonProperty("stadium")
+    private final String stadium;
 
-    public Fruit(@NonNull String name) {
+    public FootballClub(@NonNull String name) {
         this(name, null);
     }
 
     @Creator
     @BsonCreator
-    public Fruit(@NonNull @BsonProperty("name") String name,
-                 @Nullable @BsonProperty("description") String description) {
+    public FootballClub(@NonNull @BsonProperty("name") String name,
+                 @Nullable @BsonProperty("stadium") String stadium) {
         this.name = name;
-        this.description = description;
+        this.stadium = stadium;
     }
 
     @NonNull
@@ -37,7 +37,7 @@ public class Fruit {
     }
 
     @Nullable
-    public String getDescription() {
-        return description;
+    public String getStadium() {
+        return stadium;
     }
 }

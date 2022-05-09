@@ -14,24 +14,24 @@ import java.util.List;
 
 import static io.micronaut.http.HttpStatus.CREATED;
 
-@Controller("/fruits")
+@Controller("/footballclubs")
 @ExecuteOn(TaskExecutors.IO)
-class FruitController {
+class FootballClubController {
 
-    private final FruitRepository fruitService;
+    private final FootballClubRepository footballClubService;
 
-    FruitController(FruitRepository fruitService) {
-        this.fruitService = fruitService;
+    FootballClubController(FootballClubRepository footballClubService) {
+        this.footballClubService = footballClubService;
     }
 
     @Get
-    List<Fruit> list() {
-        return fruitService.list();
+    List<FootballClub> list() {
+        return footballClubService.list();
     }
 
     @Post
     @Status(CREATED)
-    void save(@NonNull @NotNull @Valid Fruit fruit) {
-        fruitService.save(fruit);
+    void save(@NonNull @NotNull @Valid FootballClub footballClub) {
+        footballClubService.save(footballClub);
     }
 }

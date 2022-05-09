@@ -11,31 +11,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Singleton
-public class MongoDbFruitRepository implements FruitRepository {
+public class MongoDbFootballClubRepository implements FootballClubRepository {
 
     private final MongoDbConfiguration mongoConf;
     private final MongoClient mongoClient;
 
-    public MongoDbFruitRepository(MongoDbConfiguration mongoConf,
-                                  MongoClient mongoClient) {
+    public MongoDbFootballClubRepository(MongoDbConfiguration mongoConf,
+                                         MongoClient mongoClient) {
         this.mongoConf = mongoConf;
         this.mongoClient = mongoClient;
     }
 
     @Override
-    public void save(@NonNull @NotNull @Valid Fruit fruit) {
-        getCollection().insertOne(fruit);
+    public void save(@NonNull @NotNull @Valid FootballClub footballClub) {
+        getCollection().insertOne(footballClub);
     }
 
     @Override
     @NonNull
-    public List<Fruit> list() {
+    public List<FootballClub> list() {
         return getCollection().find().into(new ArrayList<>());
     }
 
     @NonNull
-    private MongoCollection<Fruit> getCollection() {
+    private MongoCollection<FootballClub> getCollection() {
         return mongoClient.getDatabase(mongoConf.getName())
-                .getCollection(mongoConf.getCollection(), Fruit.class);
+                .getCollection(mongoConf.getCollection(), FootballClub.class);
     }
 }

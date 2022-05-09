@@ -6,10 +6,10 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
-public interface FruitRepository {
+public interface FootballClubRepository {
 
     @NonNull
-    List<Fruit> list();
+    List<FootballClub> list();
 
-    void save(@NonNull @NotNull @Valid Fruit fruit);
+    void save(@NonNull @NotNull @Valid FootballClub footballClub);
 }
