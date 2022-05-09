@@ -16,7 +16,7 @@
 6. Start the container of the app by using the following command:
 
    docker run -d --network mongo-network -p 8080:8080 --name football-clubs-app micronautguide:latest
-7. You can now try testing the endpoints by using [Insomnia](https://insomnia.rest/download) / [Postman](https://www.postman.com/downloads/)https://www.postman.com/downloads/) or any other testing and validating tool for RESTful applications.
+7. You can now try testing the endpoints by using [Insomnia](https://insomnia.rest/download), [Postman](https://www.postman.com/downloads/)https://www.postman.com/downloads) or any other testing and validating tool for RESTful applications.
 
 ##Endpoints
 
